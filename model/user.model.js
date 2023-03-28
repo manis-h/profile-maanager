@@ -9,26 +9,6 @@ export const UserSchema = new mongoose.Schema({
         type:String,
         required:true,
         unique:true
-    },
-    email:{
-        type:String,
-        required:true,
-        unique:true
-    },
-    firstName:{
-        type:String
-    },
-    lastName:{
-        type:String
-    },
-    mobile:{
-        type:Number
-    },
-    address:{
-        type:String
-    },
-    profile:{
-        type:String
     }
 
 

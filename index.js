@@ -1,7 +1,7 @@
 import express, { Router } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
-import  { db } from './database/connection.js';
+import   db  from './database/connection.js';
 import router from './router/route.js';
 const app=express();
 app.use(express.json());

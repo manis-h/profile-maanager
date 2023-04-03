@@ -10,7 +10,7 @@ app.use(morgan('tiny'));
 app.disable('x-powered-by')
 const port =8080;
 app.get('/',(req,res)=>{
-    res.status(201).json("HOME GET REQUEST");
+    res.status(201).send("HOME GET REQUEST");
 });
 // api routes
 app.use('/api',router)

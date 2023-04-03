@@ -1,7 +1,7 @@
 import express, { Router } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
-import connect from './database/connection.js';
+import  { db } from './database/connection.js';
 import router from './router/route.js';
 const app=express();
 app.use(express.json());
@@ -16,15 +16,4 @@ app.get('/',(req,res)=>{
 app.use('/api',router)
 
 //connection 
-connect().then(()=>{
-    try {
-        app.listen(port,()=>{
-            console.log(`server connected to ${port} `)
-        })
-        
-    } catch (error) {
-        console.log("CANNOT CONNECT")
-    }
-}).catch(error=>{
-    console.log("INVALID DATABASE CONNECTION")
-})
+db()
